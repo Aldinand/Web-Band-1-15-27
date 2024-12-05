@@ -105,62 +105,20 @@
 
     <section id="shop2" class="px-6 py-12">
     <div class="flex flex-wrap justify-center gap-6">
+        @foreach ($merches as $merch)
         
+       
         <a href="https://www.tokopedia.com/rumahsakitmerch/t-shirt-about-time-black-official-rumahsakit?extParam=src%3Dshop%26whid%3D12163006" target="_blank" class="relative group w-72 h-72">
-            <img src="{{ asset('images/a1.png') }}" alt="merch 1" class="w-full h-full object-cover rounded-md">
+            <img src="{{ asset('storage/' . $merch->image) }}" alt="merch 1" class="w-full h-full object-cover rounded-md">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-                <h2 class="text-lg font-bold">T-Shirt About Time</h2>
-                <p class="text-base font-semibold mt-2">Rp185,000</p>
+                <h2 class="text-lg font-bold">{{ $merch->name }}</h2>
+                <p class="text-base font-semibold mt-2">Rp {{number_format($merch->price, 0, ',', '.')}}</p>
             </div>
         </a>
-        
-        <a href="https://www.tokopedia.com/rumahsakitmerch/t-shirt-metro-black-official-rumahsakit?extParam=src%3Dshop%26whid%3D12163006" target="_blank" class="relative group w-72 h-72">
-            <img src="{{ asset('images/a2.png') }}" alt="merch 2" class="w-full h-full object-cover rounded-md">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-                <h2 class="text-lg font-bold">T-Shirt Metro Black</h2>
-                <p class="text-base font-semibold mt-2">Rp185,000</p>
-            </div>
-        </a>
-        
-        <a href="https://www.tokopedia.com/rumahsakitmerch/t-shirt-metro-black-official-rumahsakit?extParam=src%3Dshop%26whid%3D12163006" target="_blank" class="relative group w-72 h-72">
-            <img src="{{ asset('images/a3.png') }}" alt="merch 3" class="w-full h-full object-cover rounded-md">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-                <h2 class="text-lg font-bold">T-Shirt Metro</h2>
-                <p class="text-base font-semibold mt-2">Rp185,000</p>
-            </div>
-        </a>
+
+        @endforeach
     </div>
 </section>
-
-<section id="shop" class="px-6 py-12">
-    <div class="flex flex-wrap justify-center gap-6">
-      
-        <a href="https://www.tokopedia.com/rumahsakitmerch/t-shirt-official-rumahsakit-tjst?extParam=whid%3D12163006%26src%3Dshop" target="_blank" class="relative group w-72 h-72">
-            <img src="{{ asset('images/a4.png') }}" alt="merch 4" class="w-full h-full object-cover rounded-md">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-                <h2 class="text-lg font-bold">T-Shirt TJST</h2>
-                <p class="text-base font-semibold mt-2">Rp185,000</p>
-            </div>
-        </a>
-        
-        <a href="https://www.tokopedia.com/rumahsakitmerch/t-shirt-official-rumahsakit-kuning?extParam=src%3Dshop%26whid%3D12163006" target="_blank" class="relative group w-72 h-72">
-            <img src="{{ asset('images/a5.png') }}" alt="merch 5" class="w-full h-full object-cover rounded-md">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-                <h2 class="text-lg font-bold">T-Shirt Kuning</h2>
-                <p class="text-base font-semibold mt-2">Rp185,000</p>
-            </div>
-        </a>
-        
-        <a href="https://www.tokopedia.com/rumahsakitmerch/t-shirt-pasien-black-official-rumahsakit?extParam=src%3Dshop%26whid%3D12163006" target="_blank" class="relative group w-72 h-72">
-            <img src="{{ asset('images/a6.png') }}" alt="merch 6" class="w-full h-full object-cover rounded-md">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md">
-                <h2 class="text-lg font-bold">T-Shirt Pasien Black</h2>
-                <p class="text-base font-semibold mt-2">Rp185,000</p>
-            </div>
-        </a>
-    </div>
-</section>
-
 
     <section id="video" class="px-6 py-12 text-center">
         <div class="flex flex-wrap justify-center gap-6">
